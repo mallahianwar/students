@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "/Views/Shared/_Layout.cshtml";
+}
+
+<form>
+    <input type="text" name="IdNo" />
+    <button type="submit">Find</button>
+</form>
+
+@section Scripts{
+   <script>
+ 
+       $("button").click(
+           debugger;
+           function(){
+
+           $.post('Home/getData', { IdNo: 'j' }, function (result) {
+                alert("Response");
+                console.log(result);
+                $("#appendHere").html(result);
+            });
+           })
+   </script>
+}
